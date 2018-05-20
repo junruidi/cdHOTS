@@ -3,7 +3,7 @@
 #' @return third order
 #' @export
 #'
-hello<- function (x) {
+mg3<- function (x) {
   n <- nrow (x)
   m <- ncol (x)
   mm <- 1 : m
