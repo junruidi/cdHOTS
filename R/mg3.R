@@ -1,10 +1,13 @@
 #' third order mgf
 #' @param x matrix
 #' @return third order
-#' @example
-#' mg_3 = mg3(x)
 #' @export
 #'
+#' @examples
+#' mg_3 = mg3(x)
+#'
+
+
 mg3<- function (x) {
   n <- nrow (x)
   m <- ncol (x)
