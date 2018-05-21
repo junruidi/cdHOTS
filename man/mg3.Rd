@@ -7,7 +7,7 @@
 mg3(x)
 }
 \arguments{
-\item{x}{a matrix}
+\item{x}{matrix}
 }
 \value{
 third order
