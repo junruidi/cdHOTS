@@ -12,6 +12,7 @@ Authors@R: c(
       )
 Maintainer: Junrui Di <jdi2@jhu.edu>
 License: GPL-3 + file LICENSE
+Imports: rTensor
 Depends:
     R (>= 2.10),
 Suggests:
