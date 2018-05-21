@@ -15,3 +15,7 @@ third order
 \description{
 third order mgf
 }
+\examples{
+mg_3 = mg3(x)
+
+}
