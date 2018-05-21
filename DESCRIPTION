@@ -1,12 +1,31 @@
 Package: cdHOTS
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Version: 0.1.1.0000
+Title: Construct and Decomposes Higher Order Tensorian Statistics
+Description: Construct higher order staistics (higher order standardized moments) in the
+             formats of higher order tensors. Decomposes those tensors using higher oder 
+             SVD (HOSVD) or robust power tensor iteration.
+Authors@R: c(
+    person(given = "Junrui", family = "Di", 
+        role = c("aut", "cre"), email = "jdi2@jhu.edu"),
+    person(given = "Vadim", family = "Zipunnikov", 
+        role = c("aut"), email = "vzipunni@jhsph.edu ")        
+      )
+Maintainer: Junrui Di <jdi2@jhu.edu>
+License: GPL-3 + file LICENSE
+Imports:
+rTensor
+Depends:
+    R (>= 2.10),
+Suggests:
+    knitr,
+    rmarkdown,
+    covr,
+    testthat
 Encoding: UTF-8
-LazyData: true
+LazyData: TRUE
+ByteCompile: true
+Type: Package
+VignetteBuilder: knitr
+URL: https://github.com/junruidi/cdHOTS
+BugReports: https://github.com/junruidi/cdHOTS/issues
 RoxygenNote: 6.0.1
