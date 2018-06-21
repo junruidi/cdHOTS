@@ -1,5 +1,5 @@
 #' @title Construct Higher Order Tensorian Moments
-#' @description 3rd and 4th order (centered and standardized) higher order tensorian moments
+#' @description 3rd and 4th order (centered and standardized) tensorian moments
 #' @param Y data.frame or matrix of multivariate data of dimension n*p
 #' @param center column-center the data first, default is \code{TRUE}.
 #' @param standardize standardize the multivariate data, i.e. convert it to the left singular matrix

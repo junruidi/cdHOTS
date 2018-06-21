@@ -19,7 +19,7 @@ tensor_moment(Y, center = TRUE, standardize = TRUE, p = c(3, 4))
 3rd or 4th order moments
 }
 \description{
-3rd and 4th order (centered and standardized) higher order tensorian moments
+3rd and 4th order (centered and standardized) tensorian moments
 }
 \details{
 Suppose Y = USV' is the SVD, standardization is done by taking U only
