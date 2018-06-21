@@ -25,6 +25,7 @@
 #' data matrix, and it produces decomposition of the (standardized) moment tensors
 #'
 #' @references Di et al.
+#' @references A Anandkumar et al. Tensor decompositions for learning latent variable models, 2012.
 #'
 #' @examples
 #' data(dat)

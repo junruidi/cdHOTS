@@ -45,4 +45,6 @@ rob_3 = Rob_TPM(Y = dat, order = 3, rank = 10, tol = 1e-6)
 }
 \references{
 Di et al.
+
+A Anandkumar et al. Tensor decompositions for learning latent variable models, 2012.
 }
