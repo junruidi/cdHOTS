@@ -6,7 +6,9 @@
 #' @param p what is the order to construct
 #'
 #'
-#' @return 3rd or 4th order moments
+#' @return A list with eliments
+#' \item{moment}{3rd or 4th order tensors}
+#' \item{w}{whitening matrix if \code{standardize = TRUE}}
 #'
 #' @export
 #'
@@ -14,7 +16,7 @@
 #'
 #' @examples
 #' data(dat)
-#' moment_center_sd_3 = tensor_moment(Y = dat, center = TRUE, standardize = TRUE, p = 3)
+#' moment_center_sd_3 = tensor_moment(Y = dat, center = TRUE, standardize = TRUE, p = 3)$moment
 
 
 tensor_moment = function (Y, center = TRUE, standardize = TRUE, p = c(3,4)) {
@@ -29,11 +31,12 @@ tensor_moment = function (Y, center = TRUE, standardize = TRUE, p = c(3,4)) {
 
   if(standardize){
     # u = svd(Y)$u
-    # v = svd(Y)$v
-    # s = diag(svd(Y)$d)
-    # w = v %*% solve(s)
+    v = svd(Y)$v
+    s = diag(svd(Y)$d)
+    w = v %*% solve(s)
     # Y = Y %*% w
     Y = svd(Y)$u
+    rm(list = c("v","s"))
   }
 
   n = nrow (Y)
@@ -53,5 +56,10 @@ tensor_moment = function (Y, center = TRUE, standardize = TRUE, p = c(3,4)) {
     }
   }
 
-  return(mt)
+  if(!standardize){
+    w = NA
+  }
+
+  result = list("moment" = mt, "w" = w)
+  return(result)
 }

@@ -27,4 +27,4 @@ Type: Package
 VignetteBuilder: knitr
 URL: https://github.com/junruidi/cdHOTS
 BugReports: https://github.com/junruidi/cdHOTS/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

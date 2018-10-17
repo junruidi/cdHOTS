@@ -19,6 +19,7 @@
 #' @return A list with eliments
 #' \item{eigenv}{Estimated eigen vectors, sorted by based on eigenl}
 #' \item{eigenl}{Estimated eigen values, sorted from largest to smallest}
+#' \item{w}{The whitening matrix w if \code{standardize = TRUE}}
 #' @export
 #'
 #' @details See Di et al. 2018. This function does not contruct tensor first. It can only be used directly to the
@@ -45,11 +46,12 @@ Rob_TPM = function(Y, center = TRUE, standardize = TRUE, L = 10, N = 10, order =
 
   if(standardize){
     # u = svd(Y)$u
-    # v = svd(Y)$v
-    # s = diag(svd(Y)$d)
-    # w = v %*% solve(s)
+    v = svd(Y)$v
+    s = diag(svd(Y)$d)
+    w = v %*% solve(s)
     # Y = Y %*% w
     Y = svd(Y)$u
+    rm(list = c("v","s"))
   }
 
 
@@ -68,8 +70,11 @@ Rob_TPM = function(Y, center = TRUE, standardize = TRUE, L = 10, N = 10, order =
   eigenv = eigenv[,order(abs(eigenl),decreasing = T)]
   eigenl = eigenl[order(abs(eigenl),decreasing = T)]
 
+  if(!standardize){
+    w = NA
+  }
 
-  result = list("eigenv" = eigenv, "eigenl" = eigenl)
+  result = list("eigenv" = eigenv, "eigenl" = eigenl,"w" = w)
 }
 
 # power iteration for the first eigen vecotr

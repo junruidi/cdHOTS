@@ -16,7 +16,7 @@
 #'
 #' @examples
 #' data(dat)
-#' moment_center_sd_3 = tensor_moment(Y = dat, center = TRUE, standardize = TRUE, p = 3)
+#' moment_center_sd_3 = tensor_moment(Y = dat, center = TRUE, standardize = TRUE, p = 3)$moment
 #' decomp_3 = hoevd(x = moment_center_sd_3, rank = 32)
 #'
 

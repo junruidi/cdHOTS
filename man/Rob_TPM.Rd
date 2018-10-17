@@ -28,6 +28,7 @@ Rob_TPM(Y, center = TRUE, standardize = TRUE, L = 10, N = 10,
 A list with eliments
 \item{eigenv}{Estimated eigen vectors, sorted by based on eigenl}
 \item{eigenl}{Estimated eigen values, sorted from largest to smallest}
+\item{w}{The whitening matrix w if \code{standardize = TRUE}}
 }
 \description{
 Decomposes a higher order symmetric tensors (e.g. higher order centered and

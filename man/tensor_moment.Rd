@@ -16,7 +16,9 @@ tensor_moment(Y, center = TRUE, standardize = TRUE, p = c(3, 4))
 \item{p}{what is the order to construct}
 }
 \value{
-3rd or 4th order moments
+A list with eliments
+\item{moment}{3rd or 4th order tensors}
+\item{w}{whitening matrix if \code{standardize = TRUE}}
 }
 \description{
 3rd and 4th order (centered and standardized) tensorian moments
@@ -26,5 +28,5 @@ Suppose Y = USV' is the SVD, standardization is done by taking U only
 }
 \examples{
 data(dat)
-moment_center_sd_3 = tensor_moment(Y = dat, center = TRUE, standardize = TRUE, p = 3)
+moment_center_sd_3 = tensor_moment(Y = dat, center = TRUE, standardize = TRUE, p = 3)$moment
 }
