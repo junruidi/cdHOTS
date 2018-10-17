@@ -21,7 +21,7 @@ A list with eliments
 \item{w}{whitening matrix if \code{standardize = TRUE}}
 }
 \description{
-3rd and 4th order (centered and standardized) tensorian moments
+3rd and 4th order (centered and/or standardized) tensorian moments
 }
 \details{
 Suppose Y = USV' is the SVD, standardization is done by taking U only
