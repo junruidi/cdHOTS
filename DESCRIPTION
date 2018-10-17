@@ -1,5 +1,5 @@
 Package: cdHOTS
-Version: 0.1.1.0000
+Version: 0.1.1.1000
 Title: Construct and Decomposes Higher Order Tensorian Statistics
 Description: Construct higher order staistics (higher order standardized moments) in the
              formats of higher order tensors. Decomposes those tensors using higher oder 
