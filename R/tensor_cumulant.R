@@ -47,6 +47,7 @@ tensor_cumulant = function (Y, p) {
   }
 
   if(p == 4){
+    r3 = array (0, c (m, m, m))
     r4 = array (0, c (m, m, m, m))
     for (i in nn) {
       r3 = r3 + outer (outer (Y [i, ], Y [i, ]), Y [i,])
